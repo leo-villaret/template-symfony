@@ -1,0 +1,27 @@
+{
+    "php.suggest.basic": false,
+    "php.validate.enable": false,
+    "intelephense.telemetry.enabled": false,
+    "intelephense.format.enable": true,
+    "intelephense.completion.triggerParameterHints": true,
+    "intelephense.completion.insertUseDeclaration": true,
+    "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "intelephense.files.exclude": [
+        "**/.git/**",
+        "**/vendor/**/{Test,test,Tests,tests}/**/*Test.php"
+    ],
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true
+    },
+    "editor.tabSize": 4,
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
+}

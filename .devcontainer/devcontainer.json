@@ -1,0 +1,36 @@
+{
+    "name": "PHP 8.1 Symfony",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "apache2-php",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+      "usernamehw.errorlens", // Display errors next to code
+      "bmewburn.vscode-intelephense-client",
+      "xdebug.php-debug",
+      "mikestead.dotenv",
+      "neilbrayfield.php-docblocker"
+    ],
+    "forwardPorts": [
+      "apache2-php:80",
+      "postgresql:5432",
+      "redis:6379"
+    ],
+    "portsAttributes": {
+      "apache2-php:80": {
+        "label": "Symfony",
+        "onAutoForward": "silent"
+      },
+      "postgresql:5432": {
+        "label": "PostgreSQL",
+        "onAutoForward": "silent"
+      },
+      "redis:6379": {
+        "label": "Redis 7",
+        "onAutoForward": "silent"
+      }
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "bash .devcontainer/install.sh",
+    "postStartCommand": "composer install",
+    "shutdownAction": "stopCompose"
+  }
